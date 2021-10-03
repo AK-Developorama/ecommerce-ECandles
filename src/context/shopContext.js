@@ -18,7 +18,7 @@ class ShopProvider extends Component {
     isMenuOpen: false
   };
 
-
+//if there are items in the cart show them, if not create new cart:
   componentDidMount() {
     if (localStorage.checkout_id) {
       this.fetchCheckout(localStorage.checkout_id)

@@ -34,8 +34,8 @@ const NavMenu = () => {
                 <Link to="/">Sustainability</Link>
               </VStack>
             </DrawerBody>
-            <DrawerFooter textAlign="center">
-              <Text w="100%">© Copyright www.workingwithshopify.com</Text>
+            <DrawerFooter textAlign="left">
+              <Text w="100%">© Copyright AK Developorama</Text>
             </DrawerFooter>
           </DrawerContent>
         </DrawerOverlay>

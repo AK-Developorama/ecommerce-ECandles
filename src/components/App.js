@@ -16,6 +16,7 @@ function App() {
         <NavMenu />
         <Cart />
         <Switch>
+        {/* use the product handle as it is exported from ProductPage */}
           <Route path="/products/:handle">
             <ProductPage />
           </Route>
