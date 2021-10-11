@@ -1,43 +1,30 @@
-import React from 'react'
-import { Box, Button, Text, Image, Center } from "@chakra-ui/react"
+import React from "react";
+import { Box, Button, Text, Image, Center } from "@chakra-ui/react";
+import RichText from "../components/RichText";
+import ImageWithText from "../components/ImageWithText";
 
 const Hero = () => {
   return (
-    <Box backgroundColor="#543534" w="100%" position="relative" h="70vh">
-      <Image
-        className="fade-in"
-        h="100%"
-        m="auto"
-        objectFit="contain"
-        objectPosition={["top", "center"]}
-        src="https://cdn.shopify.com/s/files/1/0472/5705/9496/files/Bath_Bomb_-_Product-4_-_nobg_1.png?v=1610055851.jpg"
-      />
-      <Text
-        className="tracking-in-expand-fwd"
-        position="absolute"
-        bottom="20%"
-        w="100%"
-        textAlign="center"
-        color="white"
-        fontWeight="bold"
-        fontSize="4rem"
-      >
-        Introducing Ethical Candles
-      </Text>
-      <Center>
-        <Button
-          w="10rem"
-          backgroundColor="#fff2cc"
-          color="white"
-          _hover={{ opacity: "70%" }}
-          position="absolute"
-          bottom="10%"
+    <>
+      <Box backgroundColor="white" w="100%" h="43vh">
+        <RichText heading="EARTHFRIEND CANDLES" headingSize="4vh" />
+        <Box
+          borderBottom="0.25pt white solid"
+          backgroundColor="whitesmoke"
+          display="flex"
+          flexDir="column"
+          justifyContent="space-between"
+          alignItems="center"
         >
-          Shop Now
-        </Button>
-      </Center>
-    </Box>
+          <Image
+            className="fade-in"
+            w="50%"
+            src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633892755/earthfriendcandles/bg2_h7iyih.jpg"
+          />
+        </Box>
+      </Box>
+    </>
   );
-}
+};
 
-export default Hero
+export default Hero;

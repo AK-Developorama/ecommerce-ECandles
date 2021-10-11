@@ -8,7 +8,7 @@ const ImageWithText = ({ button, reverse, image, heading, text }) => {
 
   return (
     <Box>
-      <Flex flexDir={['column', reverseSection]} w="100%">
+      <Flex flexDir={['row', reverseSection]} w="100%">
         <Image objectFit="cover" w={["100%", "50%"]} src={image} />
         <Box w={["100%", "50%"]} display="flex" flexDir="column" justifyContent="center" alignItems="center" p="2rem">
           <Heading pb="2rem">
@@ -18,7 +18,7 @@ const ImageWithText = ({ button, reverse, image, heading, text }) => {
             {text && text}
           </Text>
           {button ?
-            <Button w="10rem" backgroundColor="#FF38BD" color="white" _hover={{ opacity: '70%' }} >Buy Now</Button> : null
+            <Button w="10rem" color="white" _hover={{ opacity: '70%' }} >Buy Now</Button> : null
           }
         </Box>
       </Flex>

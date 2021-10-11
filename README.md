@@ -9,6 +9,6 @@ chakra ui
 
 shopify buy
 
-react icons
+react icons - nicest material design icons
 
 react router dom 

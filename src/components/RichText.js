@@ -1,21 +1,34 @@
-import React from 'react'
-import { Box, Heading, Text, Center } from "@chakra-ui/react"
+import React from "react";
+import { Box, Heading, Text, Center } from "@chakra-ui/react";
 
-const RichText = ({ heading, text }) => {
+const RichText = ({
+  heading,
+  headingSize,
+  secondHeadingText,
+  secondHeadingSize,
+  text,
+  textSize,
+}) => {
   return (
-    <Box p={4}>
+    <Box>
       <Center display="flex" flexDir="column" textAlign="center">
-        <Heading py={10}>
+        <Heading py="4vh" fontSize={headingSize}>
           {heading}
         </Heading>
-        { text ? 
-          <Text pb={10}>
+
+        {secondHeadingText ? (
+          <Heading fontSize={secondHeadingSize} py="4vh">
+            {secondHeadingText}
+          </Heading>
+        ) : null}
+        {text ? (
+          <Text fontSize={textSize} pb="4vh">
             {text}
-          </Text> : null
-        }
+          </Text>
+        ) : null}
       </Center>
     </Box>
-  )
-}
+  );
+};
 
-export default RichText
+export default RichText;
