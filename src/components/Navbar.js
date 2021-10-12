@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <Box
-      borderBottom="0.25pt white solid"
+      className="navBar"
       backgroundColor="whitesmoke"
       display="flex"
       flexDir="row"
@@ -20,6 +20,7 @@ const Navbar = () => {
       alignItems="center"
     >
       <Icon
+        className="navMenu"
         _hover={{ opacity: "70%" }}
         cursor="pointer"
         onClick={() => openMenu()}
@@ -27,14 +28,14 @@ const Navbar = () => {
         w={35}
         h={35}
       ></Icon>
-      <Link to="/">
+      <Link className="titleIcon" to="/">
         <Image
           _hover={{ opacity: "70%" }}
           src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633450252/earthfriendcandles/android-chrome-512x512_qgmxhk.png"
           w={"6vh"}
         />
       </Link>
-      <Box>
+      <Box className="cartIcon">
         <Icon
           _hover={{ opacity: "70%" }}
           cursor="pointer"

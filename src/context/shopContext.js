@@ -5,9 +5,8 @@ const ShopContext = React.createContext();
 
 const client = Client.buildClient({
   storefrontAccessToken: process.env.REACT_APP_SHOPIFY_STOREFRONT_KEY,
-  domain: process.env.REACT_APP_SHOPIFY_DOMAIN
+  domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
 });
-
 
 class ShopProvider extends Component {
   state = {
@@ -15,21 +14,20 @@ class ShopProvider extends Component {
     product: {},
     checkout: {},
     isCartOpen: false,
-    isMenuOpen: false
+    isMenuOpen: false,
   };
 
-//if there are items in the cart show them, if not create new cart:
   componentDidMount() {
     if (localStorage.checkout_id) {
-      this.fetchCheckout(localStorage.checkout_id)
+      this.fetchCheckout(localStorage.checkout_id);
     } else {
-      this.createCheckout()
+      this.createCheckout();
     }
   }
 
   createCheckout = async () => {
     const checkout = await client.checkout.create();
-    localStorage.setItem("checkout_id", checkout.id)
+    localStorage.setItem("checkout_id", checkout.id);
     this.setState({ checkout: checkout });
   };
 
@@ -59,11 +57,12 @@ class ShopProvider extends Component {
   };
 
   removeLineItem = async (lineItemIdsToRemove) => {
-    const checkoutId = this.state.checkout.id
+    const checkoutId = this.state.checkout.id;
 
-    client.checkout.removeLineItems(checkoutId, lineItemIdsToRemove)
-      .then(checkout => this.setState({ checkout }))
-  }
+    client.checkout
+      .removeLineItems(checkoutId, lineItemIdsToRemove)
+      .then((checkout) => this.setState({ checkout }));
+  };
 
   fetchAllProducts = async () => {
     const products = await client.product.fetchAll();
@@ -85,15 +84,13 @@ class ShopProvider extends Component {
   };
 
   closeMenu = () => {
-    this.setState({ isMenuOpen: false })
-  }
+    this.setState({ isMenuOpen: false });
+  };
   openMenu = () => {
-    this.setState({ isMenuOpen: true })
-  }
-
+    this.setState({ isMenuOpen: true });
+  };
 
   render() {
-
     return (
       <ShopContext.Provider
         value={{
@@ -105,7 +102,7 @@ class ShopProvider extends Component {
           closeMenu: this.closeMenu,
           openMenu: this.openMenu,
           addItemToCheckout: this.addItemToCheckout,
-          removeLineItem: this.removeLineItem
+          removeLineItem: this.removeLineItem,
         }}
       >
         {this.props.children}

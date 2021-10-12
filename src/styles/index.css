@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 /* sass variables */
-html {
-  width: 100% !important;
-}
-
 body {
   margin: 0;
-  min-width: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   font-family: "Raleway", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,10 +26,23 @@ img.fade-in.css-11ze7cv {
   width: calc(100px + 80vh) !important;
 }
 
-/* all the buttons */
+/* shop button */
 button.chakra-button {
   background-color: #888888;
   color: white;
+}
+
+/* otehr buttons */
+/* images with text */
+/* img.chakra-image.css-1ov894u {
+height: calc(10px + 20vh)!important;
+
+} */
+/* image text containers */
+div.imageTextDiv.css-42gcej {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 
 /* footer */
@@ -130,4 +141,11 @@ a:active {
     opacity: 1;
   }
 }
+
+/* MEDIA QUERIES */
+/* @media screen and (max-width: 480px){
+div.App, div#root, body {
+  width: 100% !important;
+}
+} */
 /*# sourceMappingURL=index.css.map */
