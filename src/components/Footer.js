@@ -6,15 +6,16 @@ const Footer = () => {
   return (
     <Box className="footer" w="100%">
       <Grid
+        className="footerGrid"
         display="flex"
         flexDir="row"
         justifyContent="space-between"
         templateColumns={["repeat(1, 1fr)", "repeat(4, 2fr)"]}
       >
         <Box
+          className="footerLogoDiv"
           backgroundColor="whitesmoke"
           borderBottom="0.25pt white solid"
-          backgroundColor="whitesmoke"
           display="flex"
           flexDir="row"
           p="2rem"
@@ -22,9 +23,9 @@ const Footer = () => {
           alignItems="center"
         >
           <Image
+            className="footerLogo"
             alignItems="center"
             src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633450252/earthfriendcandles/android-chrome-512x512_qgmxhk.png"
-            w={"5vw"}
           />
         </Box>
         <VStack p="2rem">
@@ -41,28 +42,29 @@ const Footer = () => {
         </VStack>
 
         <Box
+          className="footerImgDiv"
           display="flex"
           flexDir="column"
           justifyContent="space-between"
           alignItems="center"
         >
           <Image
+            className="footerImg"
             w="50vh"
             src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633898710/earthfriendcandles/footer_faic6a.jpg"
           />
-          
         </Box>
       </Grid>
       <Box backgroundColor="whitesmoke">
         <Text
+          p="1.5vh"
           textAlign="center"
           borderTop="1px solid grey"
-          p="1.5vh"
           fontSize={"1.8vh"}
         >
           Copyright © 2011-2020 Earthfriend Candles, All Rights Reserved.
         </Text>
-        <Text textAlign="center" fontSize={"1.8vh"}>
+        <Text pb="1.5vh" textAlign="center" fontSize={"1.8vh"}>
           Made with ❤ by AK Developorama
         </Text>
       </Box>

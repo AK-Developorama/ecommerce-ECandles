@@ -17,7 +17,7 @@ const Hero = () => {
       >
         <Image
           className="fade-in"
-          w="50%"
+          w="50.1%"
           src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633892755/earthfriendcandles/bg2_h7iyih.jpg"
         />
       </Box>

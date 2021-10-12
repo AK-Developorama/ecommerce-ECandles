@@ -13,7 +13,7 @@ const ImageWithText = ({ button, reverse, image, heading, text }) => {
       flexDir={["row", reverseSection]}
       w="100%"
     >
-      <Image objectFit="cover" w={["100%", "50%"]} src={image} />
+      <Image src={image} />
       <Box
         className="textDiv"
         w={["100%", "50%"]}

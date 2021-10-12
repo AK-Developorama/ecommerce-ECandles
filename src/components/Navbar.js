@@ -15,7 +15,9 @@ const Navbar = () => {
       backgroundColor="whitesmoke"
       display="flex"
       flexDir="row"
-      p="2vh"
+      pl="4vh"
+      pr="4vh"
+      py="2vh"
       justifyContent="space-between"
       alignItems="center"
     >
