@@ -7,7 +7,6 @@ import Navbar from "./Navbar";
 import Cart from "./Cart";
 import NavMenu from "./NavMenu";
 import Footer from "./Footer";
-import AllProducts from "../pages/AllProducts";
 
 function App() {
   return (
@@ -18,10 +17,7 @@ function App() {
         <NavMenu />
         <Cart />
         <Switch>
-        {/*   <Route path="">
-            <AllProducts />
-          </Route> */}
-          {/* use the product handle as it is exported from ProductPage */}
+           {/* use the product handle as it is exported from ProductPage */}
           <Route path="/products/:handle">
             <ProductPage />
           </Route>
@@ -30,7 +26,8 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-        <Footer />
+{/*         <ViewAllProducts/>
+ */}        <Footer />
       </Router>
     </div>
   );

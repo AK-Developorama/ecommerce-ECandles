@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Box, Grid, Text, Image, Button } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import Hero from "../components/Hero";
 import RichText from "../components/RichText";
 import ImageWithText from "../components/ImageWithText";
+import ProductCarousel from "../components/ProductCarousel";
+import ScrollToTop from "react-scroll-up";
 
 const HomePage = () => {
   const { fetchAllProducts, products } = useContext(ShopContext);
@@ -19,14 +21,12 @@ const HomePage = () => {
   return (
     <Box className="homePage">
       <Hero />
-
       <RichText
         secondHeadingText="The sustainable candles you’ve been waiting for."
         secondHeadingSize="3vh"
         text="Made from 88% farm-grown Yorkshire soy + 12% UK beeswax"
         textSize="2.5vh"
       />
-
       <Box
         className="shopButtonDiv"
         display="flex"
@@ -45,10 +45,9 @@ const HomePage = () => {
           Shop Now
         </Button>
       </Box>
-
       <ImageWithText
         image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633892754/earthfriendcandles/bg1_zrlcdv.jpg"
-        heading="5456554"
+        heading="Why Soy Candles?"
         text="         
             'Most candles are made from paraffin wax, a petroleum by-product of crude oil, and emit large amounts of particulate pollution when burned — a major ingredient in air pollution. Add in metal-based wicks, artificial scents and boosters, and the notion of candle purity goes up in flames.' (The Guardian)
 
@@ -62,39 +61,26 @@ const HomePage = () => {
         reverse
         button
         image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633967591/earthfriendcandles/bg3_llxjml.jpg"
-        heading="5456554"
+        heading="How Are We different..."
         text="         
-            'Most candles are made from paraffin wax, a petroleum by-product of crude oil, and emit large amounts of particulate pollution when burned — a major ingredient in air pollution. Add in metal-based wicks, artificial scents and boosters, and the notion of candle purity goes up in flames.' (The Guardian)
-
+            'Our non-toxic soy candles are created without any synthetics, making for a cleaner flame and more transparent ingredients list.
+Vegetable-based, the wax in soy candles comes from soybean oil, ensuring they’re free of potentially toxic chemicals such as ones found in paraffin. Producing a slow burn with no residue or sooty smokiness thanks to their cotton wicks, these natural candles tend to last longer too' (The Guardian)
             And remember our soy wax candles tend to burn for 50% longer than parrafin ones!
           
           "
 
         //https://www.theguardian.com/environment/2011/nov/27/lucy-siegle-candle-wax-ethical
       />
-      <Grid py={"16vh"} templateColumns={["repeat(1fr)", "repeat(3, 1fr)"]}>
-        {products.map((product) => (
-          <Link to={`/products/${product.handle}`} key={product.id}>
-            <Box
-              _hover={{ opacity: "80%" }}
-              textAlign="center"
-              position="relative"
-            >
-              <Image src={product.images[0].src} w="50%" />
-              <Text
-                fontTransform="uppercase"
-                fontWeight="bold"
-                position="center"
-                w="100%"
-              >
-                {product.title}
-              </Text>
-              {/*               <Text w="100%">${product.variants[0].price}</Text>
-               */}
-            </Box>
-          </Link>
-        ))}
-      </Grid>
+      <ProductCarousel />
+      <ScrollToTop showUnder={160}>
+        <div className="scrollComponent">
+          <img
+            className="scrollUpButton"
+            alt="scrollUpButton"
+            src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1634483066/earthfriendcandles/up_arrow_round_bkgj3i.png"
+          ></img>
+        </div>
+      </ScrollToTop>
     </Box>
   );
 };

@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import RichText from "../components/RichText";
+import ProductCarousel from "../components/ProductCarousel";
 
 const ProductPage = () => {
   let { handle } = useParams();
@@ -36,7 +37,7 @@ const ProductPage = () => {
   if (!product.title) return <div>loading...</div>;
 
   return (
-    <>
+    <div className="productPageDiv">
       <Box p="2rem">
         <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]} m="auto">
           <Flex justifyContent="center" alignItems="center">
@@ -68,37 +69,21 @@ const ProductPage = () => {
           </Box>
         </Grid>
       </Box>
-      <RichText heading="Soy wax is rated the best non-toxic candle ingredient!" />
-      <Center fontWeight="bold" pb="2rem">
-        You Might also like
-      </Center>
-      <Grid
-        templateColumns={["repeat(1fr)", "repeat(3, 1fr)"]}
-        id="products"
-        mb={"7vh"}
+      <RichText
+        heading="'Soy wax is rated the best non-toxic candle ingredient!' (The Guardian)"
+        headingSize="2.5vh"
+      />
+      <Center pb="2rem">You Might Also Like:</Center>
+      <Box
+        pb="6vh"
+        display="flex"
+        flexDir="column"
+        alignItems="center"
+        justifyContent="center"
       >
-        {products.map((product) => (
-          <Link to={`/products/${product.handle}`} key={product.id}>
-            <Box
-              _hover={{ opacity: "80%" }}
-              textAlign="center"
-              position="relative"
-              mr={"1vh"}
-              ml={"1vh"}
-              mb={"4vh"}
-            >
-              <Image src={product.images[0].src} />
-              <Text fontWeight="bold" position="absolute" bottom="15%" w="100%">
-                {product.title}
-              </Text>
-              <Text position="absolute" bottom="5%" w="100%">
-                ${product.variants[0].price}
-              </Text>
-            </Box>
-          </Link>
-        ))}
-      </Grid>
-    </>
+        <ProductCarousel />
+      </Box>
+    </div>
   );
 };
 

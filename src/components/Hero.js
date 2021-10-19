@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Button, Text, Image, Center } from "@chakra-ui/react";
 import RichText from "../components/RichText";
-import ImageWithText from "../components/ImageWithText";
 
 const Hero = () => {
   return (

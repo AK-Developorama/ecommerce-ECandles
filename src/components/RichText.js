@@ -11,6 +11,8 @@ const RichText = ({
 }) => {
   return (
     <Center
+      pr="2vh"
+      pl="2vh"
       className="richText"
       display="flex"
       flexDir="column"

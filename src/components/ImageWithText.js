@@ -27,7 +27,7 @@ const ImageWithText = ({ button, reverse, image, heading, text }) => {
         <Text pb="2rem">{text && text}</Text>
         {button ? (
           <Button w="10rem" color="white" _hover={{ opacity: "70%" }}>
-            Buy Now
+            Find Out More
           </Button>
         ) : null}
       </Box>
