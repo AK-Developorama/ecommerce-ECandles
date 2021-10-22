@@ -5,7 +5,7 @@
 $textColor: #636161;
 $buttonColor: #888888;
 $whiteText: white;
-$headerFooterColor: #e9e9e7;
+$headerFooterColor: whitesmoke;
 
 /* navbar */
 div.navBar {
@@ -15,9 +15,12 @@ div.navBar {
 }
 /* body */
 body {
+  position: absolute;
+  height: 100%;
   margin: 0;
   min-width: 100%;
   font-family: "Raleway", sans-serif !important;
+  width: 100% !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $textColor !important;
@@ -35,6 +38,33 @@ a:active {
   color: inherit;
 }
 
+/* titles */
+h2.chakra-heading {
+  letter-spacing: 0.5vh !important;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 100 !important;
+  color: $textColor !important;
+  word-wrap: nowrap !important;
+  text-align: center;
+}
+
+/* chakra h2 biggest heading to be overwritten */
+.css-i003ak {
+  font-size: 2em !important;
+}
+/* 2nd headings */
+.css-1xrc61c {
+  font-size: 1.3em !important;
+}
+
+/* 3rd headings */
+.css-u85faf {
+  font-size: 1.2em !important;
+}
+
+/* main text */
+
+/* hero image */
 .fade-in {
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -43,16 +73,6 @@ a:active {
   animation-duration: 2s;
 }
 
-/* titles */
-h2.chakra-heading {
-  letter-spacing: 0.5vh !important;
-  font-family: "Raleway", sans-serif !important;
-  font-weight: 100 !important;
-  color: $textColor !important;
-  word-wrap: nowrap !important;
-}
-
-/* hero image */
 img.fade-in.css-11ze7cv {
   width: 80vh !important;
 }
@@ -83,7 +103,9 @@ div.carousel-root {
   justify-content: space-between !important;
   align-items: center !important;
 }
-
+/* .carousel.carousel-slider .control-arrow:hover {
+    background: rgba(85, 84, 84, 0.2)!important;
+} */
 /* main image divs */
 div.carousel.carousel-slider {
   width: 30% !important;
@@ -108,15 +130,26 @@ button.control-arrow {
   z-index: 0 !important;
   font-size: 1vh !important;
   padding: calc(2px+0.2vh) !important;
-  background: $headerFooterColor !important;
+  background: #88888857 !important;
   opacity: 1 !important;
-  color: $headerFooterColor !important;
 }
+control-arrow control-prev{
+  z-index: 0 !important;
+
+}
+
 
 button.control-arrow:hover {
   background: $buttonColor !important;
 }
 
+/* div with image in carousel */
+div.css-13y17wt{
+  z-index: -1000 !important;
+
+}
+
+/* carousel end */
 /* footer */
 div.footer {
   background-color: $headerFooterColor !important;
@@ -133,11 +166,57 @@ img.scrollUpButton {
 }
 
 /* navMenu */
+.chakra-slide.chakra-modal__content.css-6e3h0h {
+  background: $buttonColor !important ;
+}
+
+/* arrow */
+.css-dy6fgq-MuiButtonBase-root-MuiListItemButton-root:hover svg,
+.css-dy6fgq-MuiButtonBase-root-MuiListItemButton-root:focus svg {
+  opacity: 1 !important;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1wb5pax-MuiSvgIcon-root:focus {
+  color: $textColor !important;
+  opacity: 1 !important;
+}
+.css-1wb5pax-MuiSvgIcon-root {
+  color: $textColor;
+}
+.css-1bfbv24-MuiPaper-root {
+  color: $textColor !important;
+}
+.css-wty661-MuiSvgIcon-root:active {
+  color: $textColor !important;
+}
+
+.css-wty661-MuiSvgIcon-root:hover {
+  color: $textColor !important;
+  opacity: 1 !important;
+}
 
 div.chakra-modal__body.css-79z5gx {
   display: flex !important;
   margin: 0 auto !important;
 }
+.css-10hburv-MuiTypography-root {
+  font-size: 0.8rem !important;
+  letter-spacing: 0.1vh !important;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 100 !important;
+  color: $whiteText !important;
+  word-wrap: nowrap !important;
+}
+
+div.css-1bfbv24-MuiPaper-root {
+  background-color: $buttonColor !important;
+}
+
+.css-1mttud9 {
+  background-color: $buttonColor !important;
+}
+
+/* navMenu end */
 
 @keyframes fadeInOpacity {
   0% {
@@ -202,9 +281,14 @@ div.chakra-modal__body.css-79z5gx {
 /* MEDIA QUERIES */
 
 /* image with text rearrange */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+  /* hero image  */
+  img.fade-in {
+    width: 100%;
+  }
+
   div.imageTextDiv {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   div.textDiv.css-1b0it1t {
     width: 100% !important;
@@ -212,6 +296,50 @@ div.chakra-modal__body.css-79z5gx {
   img.chakra-image.css-0 {
     object-fit: contain;
     max-width: 100%;
+  }
+}
+
+/* have to overwrite the chakra ui rules : */
+@media screen and (min-width: 48em) {
+  .css-1a4d118 {
+    font-size: 3vh !important;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  /* top image with text  */
+  .css-zgv8k7 {
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+  /* bottom image with text  */
+  .css-kux88w {
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  /* top image with text  */
+  .css-zgv8k7 {
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+  /* bottom image with text  */
+  .css-kux88w {
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .css-zgv8k7 {
+    -webkit-flex-direction: row !important;
+    flex-direction: row !important;
+  }
+  .css-kux88w {
+    -webkit-flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important;
   }
 }
 
@@ -225,8 +353,3 @@ div.chakra-modal__body.css-79z5gx {
   }
 }
 
-@media screen and (max-width: 365px) {
-  body {
-    width: 100% !important;
-  }
-}

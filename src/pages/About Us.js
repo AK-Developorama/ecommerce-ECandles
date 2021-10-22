@@ -4,9 +4,9 @@ import { Box, Grid, Text, Image, Button } from "@chakra-ui/react";
 import RichText from "../components/RichText";
 import ImageWithText from "../components/ImageWithText";
 
-const Sustainability = () => {
+const AboutUs = () => {
   return (
-    <Box pb="6vh" className="SustainabilityPage">
+    <Box pb="6vh" className="AboutUsPage">
       <RichText
         secondHeadingText="We are here to help."
         secondHeadingSize="3vh"
@@ -26,4 +26,4 @@ const Sustainability = () => {
   );
 };
 
-export default Sustainability;
+export default AboutUs;

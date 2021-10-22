@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Box, Grid, Text, Image, Button } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
-import Hero from "../components/Hero";
 
 
 const ViewAllProducts = () => {
@@ -33,8 +32,7 @@ const ViewAllProducts = () => {
               >
                 {product.title}
               </Text>
-              {/*               <Text w="100%">${product.variants[0].price}</Text>
-               */}
+              
             </Box>
           </Link>
         ))}

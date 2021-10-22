@@ -2,15 +2,15 @@ import React from 'react'
 import { Box, Flex, Button, Text, Image, Heading } from "@chakra-ui/react"
 
 
-const ImageWithText = ({ button, reverse, image, heading, text }) => {
+const ImageWithText = ({ classname, button, reverse, image, heading, text }) => {
 
   const reverseSection = reverse ? 'row-reverse' : 'row';
 
   return (
     <Flex
-      className="imageTextDiv"
+      className={classname}
       pt="8vh"
-      flexDir={["row", reverseSection]}
+      flexDir={["column", reverseSection]}
       w="100%"
     >
       <Image src={image} />
@@ -23,8 +23,8 @@ const ImageWithText = ({ button, reverse, image, heading, text }) => {
         alignItems="center"
         p="2rem"
       >
-        <Heading pb="2rem">{heading && heading}</Heading>
-        <Text pb="2rem">{text && text}</Text>
+        <Heading pb="2rem">{heading}</Heading>
+        <Text pb="2rem">{text}</Text>
         {button ? (
           <Button w="10rem" color="white" _hover={{ opacity: "70%" }}>
             Find Out More

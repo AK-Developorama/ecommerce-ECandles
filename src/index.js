@@ -4,7 +4,8 @@ import './styles/index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from "@chakra-ui/react"
-import ShopProvider from './context/shopContext'
+import ShopProvider from './context/shopContext';
+
 
 ReactDOM.render(
   <ChakraProvider>

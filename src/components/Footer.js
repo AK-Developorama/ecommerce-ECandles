@@ -36,9 +36,9 @@ const Footer = () => {
         </VStack>
         <VStack p="2rem">
           <Text>CUSTOMER CARE</Text>
-          <Link to="/">Help/FAQs</Link>
-          <Link to="/">Shipping & Returns</Link>
-          <Link to="/">Privacy Policy</Link>
+          <Link to="/customercare">Shipping & Returns</Link>
+          <Link to="/customercare">Help/FAQs</Link>
+          <Link to="/customercare">Privacy Policy</Link>
         </VStack>
 
         <Box
@@ -62,7 +62,7 @@ const Footer = () => {
           borderTop="1px solid grey"
           fontSize={"1.8vh"}
         >
-          Copyright © 2011-2020 Earthfriend Candles, All Rights Reserved.
+          Copyright ©2021 Earthfriend Candles, All Rights Reserved.
         </Text>
         <Text pb="1.5vh" textAlign="center" fontSize={"1.8vh"}>
           Made with ❤ by AK Developorama

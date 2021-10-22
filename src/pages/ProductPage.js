@@ -13,6 +13,8 @@ import {
 import { ShopContext } from "../context/shopContext";
 import RichText from "../components/RichText";
 import ProductCarousel from "../components/ProductCarousel";
+import ScrollToTop from "react-scroll-up";
+
 
 const ProductPage = () => {
   let { handle } = useParams();
@@ -82,6 +84,15 @@ const ProductPage = () => {
         justifyContent="center"
       >
         <ProductCarousel />
+        <ScrollToTop showUnder={160}>
+          <div className="scrollComponent">
+            <img
+              className="scrollUpButton"
+              alt="scrollUpButton"
+              src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1634483066/earthfriendcandles/up_arrow_round_bkgj3i.png"
+            ></img>
+          </div>
+        </ScrollToTop>
       </Box>
     </div>
   );

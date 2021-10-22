@@ -1,58 +1,21 @@
 import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import { styled, ThemeProvider, createTheme } from "@mui/material/styles";
-import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Paper from "@mui/material/Paper";
-import IconButton from "@mui/material/IconButton";
-import Tooltip from "@mui/material/Tooltip";
-import ArrowRight from "@mui/icons-material/ArrowRight";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
-import Home from "@mui/icons-material/Home";
-import Settings from "@mui/icons-material/Settings";
-import People from "@mui/icons-material/People";
-import PermMedia from "@mui/icons-material/PermMedia";
-import Dns from "@mui/icons-material/Dns";
-import Public from "@mui/icons-material/Public";
+import RichText from "../components/RichText";
 import {
   Drawer,
   DrawerBody,
-  DrawerHeader,
-  DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  VStack,
-  Image,
 } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import { Link } from "react-router-dom";
 
-/* MATERIAL UI DATA  */
-
-const data = [
-  { icon: <People />, label: "Authentication" },
-  { icon: <Dns />, label: "Database" },
-  { icon: <PermMedia />, label: "Storage" },
-  { icon: <Public />, label: "Hosting" },
-];
-
-const FireNav = styled(List)({
-  "& .MuiListItemButton-root": {
-    paddingLeft: 24,
-    paddingRight: 24,
-  },
-  "& .MuiListItemIcon-root": {
-    minWidth: 0,
-    marginRight: 16,
-  },
-  "& .MuiSvgIcon-root": {
-    fontSize: 20,
-  },
-});
 
 const NavMenu = () => {
   const { isMenuOpen, closeMenu } = useContext(ShopContext);
@@ -66,120 +29,200 @@ const NavMenu = () => {
       placement="left"
       size="xs"
     >
-      <DrawerOverlay>
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerBody>
-            {/* LINKS
-          
-          <Link to="/">PRODUCTS</Link>
-              <Link to="/">Shipping</Link>
-
-              <Link to="/">LEARN ABOUT US</Link>
-              <Link to="/">Sustainability</Link>
-              <Link to="/">Contact Us</Link>
-              <Link to="/">CUSTOMER CARE</Link>
-              
-               */}
-            {/* MATERIAL UI LIST */}
-
-            <Box sx={{ display: "flex" }}>
-              <ThemeProvider
-                theme={createTheme({
-                  components: {
-                    MuiListItemButton: {
-                      defaultProps: {
-                        disableTouchRipple: true,
-                      },
+      <DrawerContent>
+        <DrawerCloseButton />
+        <DrawerBody>
+          <Box sx={{ display: "flex" }}>
+            <ThemeProvider
+              theme={createTheme({
+                components: {
+                  MuiListItemButton: {
+                    defaultProps: {
+                      disableTouchRipple: true,
                     },
                   },
-                  palette: {
-                    mode: "dark",
-                  },
-                })}
-              >
-                <Paper elevation={0} sx={{ maxWidth: 256 }}>
-                  <FireNav component="nav" disablePadding>
-                    <ListItemButton component="a" href="#customized-list">
-                      <ListItemText
-                        sx={{ my: 0 }}
-                        primary="EARTHFRIEND CANDLES"
-                      />
-                    </ListItemButton>
-                    <Divider />
-                    <ListItem component="div" disablePadding>
-                      <ListItemButton sx={{ height: 56 }}></ListItemButton>
-                    </ListItem>
-                    <Divider />
-                    <Box
+                },
+              })}
+            >
+              <Paper elevation={0} sx={{ maxWidth: 256 }}>
+                {/* TITLE */}
+                <Link to="/">
+                  <RichText heading="EARTHFRIEND CANDLES" headingSize="2.7vh" />
+                </Link>
+
+                {/* OUR PRODUCTS */}
+                <ListItemButton
+                  alignItems="flex-start"
+                  sx={{
+                    pt: 2.5,
+                    pb: 2.5,
+                  }}
+                >
+                  <Link to="/products-catalogue">
+                    <ListItemText primary="OUR PRODUCTS" sx={{ my: 2 }} />
+                  </Link>
+                </ListItemButton>
+
+                {/* COMPANY */}
+
+                <ListItemButton
+                  alignItems="flex-start"
+                  onClick={() => setOpen(!open)}
+                  sx={{
+                    pt: 2.5,
+                    pb: 2.5,
+                    "&:hover, &:focus": {
+                      "& svg": { opacity: open ? 1 : 0 },
+                    },
+                  }}
+                >
+                  <ListItemText
+                    primary="COMPANY"
+                    secondary=""
+                    secondaryTypographyProps={{
+                      noWrap: true,
+                      color: open
+                        ? "rgba(136,136,136,1)"
+                        : "rgba(255,255,255,1)",
+                    }}
+                    sx={{ my: 2 }}
+                  />
+
+                  <KeyboardArrowDown
+                    sx={{
+                      ml: 1,
+                      my: 1.5,
+                      opacity: 1,
+                      transform: open ? "rotate(-180deg)" : "rotate(0)",
+                      transition: "0.2s",
+                    }}
+                  />
+                </ListItemButton>
+                {open && (
+                  <Box>
+                    {/* About Us  */}
+                    <ListItemButton
+                      alignItems="flex-start"
                       sx={{
-                        bgcolor: open ? "rgba(71, 98, 130, 0.2)" : null,
-                        pb: open ? 2 : 0,
+                        pt: 0,
+                        pb: 0.2,
                       }}
                     >
-                      <ListItemButton
-                        alignItems="flex-start"
-                        onClick={() => setOpen(!open)}
-                        sx={{
-                          px: 3,
-                          pt: 2.5,
-                          pb: open ? 0 : 2.5,
-                          "&:hover, &:focus": {
-                            "& svg": { opacity: open ? 1 : 0 },
-                          },
-                        }}
-                      >
+                      <Link to="/about-us">
+                        <ListItemText primary="About Us" sx={{ my: 2 }} />
+                      </Link>
+                    </ListItemButton>
+                    {/* Sustainability*/}
+                    <ListItemButton
+                      alignItems="flex-start"
+                      sx={{
+                        pt: 0,
+                        pb: 0.2,
+                      }}
+                    >
+                      <Link to="/sustainability">
+                        <ListItemText primary="Sustainability" sx={{ my: 2 }} />
+                      </Link>
+                    </ListItemButton>
+                    {/* Contact*/}
+                    <ListItemButton
+                      alignItems="flex-start"
+                      sx={{
+                        pt: 0,
+                        pb: 0.2,
+                      }}
+                    >
+                      <Link to="/contact">
+                        <ListItemText primary="Contact" sx={{ my: 2 }} />
+                      </Link>
+                    </ListItemButton>
+                  </Box>
+                )}
+
+                {/* CUSTOMER CARE */}
+                <ListItemButton
+                  alignItems="flex-start"
+                  onClick={() => setOpen(!open)}
+                  sx={{
+                    pt: 2.5,
+                    pb: 2.5,
+                    "&:hover, &:focus": {
+                      "& svg": { opacity: open ? 1 : 0 },
+                    },
+                  }}
+                >
+                  <ListItemText
+                    primary="CUSTOMER CARE"
+                    secondary=""
+                    secondaryTypographyProps={{
+                      noWrap: true,
+                      color: open
+                        ? "rgba(136,136,136,1)"
+                        : "rgba(255,255,255,1)",
+                    }}
+                    sx={{ my: 2 }}
+                  />
+
+                  <KeyboardArrowDown
+                    sx={{
+                      ml: 1,
+                      my: 1.5,
+                      opacity: 1,
+                      transform: open ? "rotate(-180deg)" : "rotate(0)",
+                      transition: "0.2s",
+                    }}
+                  />
+                </ListItemButton>
+                {open && (
+                  <Box>
+                    {/*Shipping & Returns */}
+                    <ListItemButton
+                      alignItems="flex-start"
+                      sx={{
+                        pt: 0,
+                        pb: 0.2,
+                      }}
+                    >
+                      <Link to="/shipping-returns">
                         <ListItemText
-                          primary="CUSTOMER CARE"
-                          secondary="Shipping, Firestore Database, Realtime Database, Storage, Hosting, Functions, and Machine Learning"
-                          secondaryTypographyProps={{
-                            noWrap: true,
-                            fontSize: 12,
-                            lineHeight: "16px",
-                            color: open
-                              ? "rgba(0,0,0,0)"
-                              : "rgba(255,255,255,0.5)",
-                          }}
-                          sx={{ my: 0 }}
+                          primary="Shipping & Returns"
+                          sx={{ my: 2 }}
                         />
-                        <KeyboardArrowDown
-                          sx={{
-                            mr: -1,
-                            opacity: 0,
-                            transform: open ? "rotate(-180deg)" : "rotate(0)",
-                            transition: "0.2s",
-                          }}
-                        />
-                      </ListItemButton>
-                      {open &&
-                        data.map((item) => (
-                          <ListItemButton
-                            key={item.label}
-                            sx={{
-                              py: 0,
-                              minHeight: 32,
-                              color: "rgba(255,255,255,.8)",
-                            }}
-                          >
-                            <ListItemIcon sx={{ color: "inherit" }}>
-                              {item.icon}
-                            </ListItemIcon>
-                            <ListItemText primary={item.label} />
-                            {/* CUSTOMER CARE */}
-                          </ListItemButton>
-                        ))}
-                    </Box>
-                  </FireNav>
-                </Paper>
-              </ThemeProvider>
-            </Box>
-          </DrawerBody>
-        </DrawerContent>
-      </DrawerOverlay>
+                      </Link>
+                    </ListItemButton>
+                    {/* Help/FAQs*/}
+                    <ListItemButton
+                      alignItems="flex-start"
+                      sx={{
+                        pt: 0,
+                        pb: 0.2,
+                      }}
+                    >
+                      <Link to="help-FAQs">
+                        <ListItemText primary="Help/FAQs" sx={{ my: 2 }} />
+                      </Link>
+                    </ListItemButton>
+                    {/* Privacy Policy*/}
+                    <ListItemButton
+                      alignItems="flex-start"
+                      sx={{
+                        pt: 0,
+                        pb: 0.2,
+                      }}
+                    >
+                      <Link to="/privacy-policy">
+                        <ListItemText primary="Privacy Policy" sx={{ my: 2 }} />
+                      </Link>
+                    </ListItemButton>
+                  </Box>
+                )}
+              </Paper>
+            </ThemeProvider>
+          </Box>
+        </DrawerBody>
+      </DrawerContent>
     </Drawer>
   );
 };
-
-
 
 export default NavMenu;

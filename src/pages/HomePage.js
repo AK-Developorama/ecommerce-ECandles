@@ -35,15 +35,17 @@ const HomePage = () => {
         alignItems="center"
         position="center"
       >
-        <Button
-          className="shopButton"
-          w="10rem"
-          color="white"
-          _hover={{ opacity: "70%" }}
-          position="center"
-        >
-          Shop Now
-        </Button>
+        <Link to="/products-catalogue">
+          <Button
+            className="shopButton"
+            w="10rem"
+            color="white"
+            _hover={{ opacity: "70%" }}
+            position="center"
+          >
+            Shop Now
+          </Button>
+        </Link>
       </Box>
       <ImageWithText
         image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633892754/earthfriendcandles/bg1_zrlcdv.jpg"
