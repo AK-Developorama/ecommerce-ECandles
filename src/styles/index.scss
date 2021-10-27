@@ -14,7 +14,15 @@ div.navBar {
   z-index: 1 !important;
 }
 /* body */
+
+*,
+*::before,
+::after {
+  word-wrap: normal !important;
+}
+
 body {
+  
   position: absolute;
   height: 100%;
   margin: 0;
@@ -25,6 +33,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $textColor !important;
 }
+
+
+p{
+white-space: pre-line!important;
+}
+
 
 code {
   font-family: "Julius Sans One", sans-serif;
@@ -48,21 +62,11 @@ h2.chakra-heading {
   text-align: center;
 }
 
-/* chakra h2 biggest heading to be overwritten */
-.css-i003ak {
-  font-size: 2em !important;
+/* third heading homepage  */
+p.chakra-text.css-djdsir {
+  font-size: 1.1em !important;
+  padding-top: 4vh;
 }
-/* 2nd headings */
-.css-1xrc61c {
-  font-size: 1.3em !important;
-}
-
-/* 3rd headings */
-.css-u85faf {
-  font-size: 1.2em !important;
-}
-
-/* main text */
 
 /* hero image */
 .fade-in {
@@ -90,29 +94,37 @@ img.chakra-image.css-0 {
 }
 
 /* ---- carousel ---- */
+
+/* hidden thumb control div */
+div.thumbs-wrapper.axis-vertical {
+  display: none;
+}
 p.carousel-status {
   display: none;
+}
+/* end of hidden components */
+.carousel .slide img {
+  width: 50% !important;
+}
+
+div.carousel.carousel-slider {
+  max-width: 50vh !important;
 }
 
 /* entire component div */
 div.carousel-root {
   z-index: -1 !important;
-  margin-top: 20vh !important;
+  margin-top: 10vh !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   align-items: center !important;
 }
-/* .carousel.carousel-slider .control-arrow:hover {
-    background: rgba(85, 84, 84, 0.2)!important;
-} */
-/* main image divs */
-div.carousel.carousel-slider {
-  width: 30% !important;
-}
 
-div.css-13y17wt {
-  padding: 2vh !important;
+/* all products */
+/* indiv product div */
+div.indivProductDiv {
+  padding: 10vh !important;
 }
 
 /* text transform */
@@ -128,29 +140,30 @@ ul.control-dots {
 /* arrows */
 button.control-arrow {
   z-index: 0 !important;
-  font-size: 1vh !important;
-  padding: calc(2px+0.2vh) !important;
+  font-size: 1em !important;
+  padding: 0.2vh !important;
   background: #88888857 !important;
   opacity: 1 !important;
 }
-control-arrow control-prev{
+control-arrow control-prev {
   z-index: 0 !important;
-
 }
-
+.carousel.slider-wrapper {
+  width: 50%;
+}
 
 button.control-arrow:hover {
   background: $buttonColor !important;
 }
 
 /* div with image in carousel */
-div.css-13y17wt{
+div.css-13y17wt {
   z-index: -1000 !important;
-
 }
 
 /* carousel end */
 /* footer */
+
 div.footer {
   background-color: $headerFooterColor !important;
 }
@@ -164,6 +177,14 @@ img.footerLogo {
 img.scrollUpButton {
   height: calc(10px + 5vh);
 }
+
+div.footer {
+  font-size: calc(3px + 0.6em) !important;
+}
+
+/* middle links */
+/* div.chakra-stack.css-1ky8oes{
+} */
 
 /* navMenu */
 .chakra-slide.chakra-modal__content.css-6e3h0h {
@@ -196,11 +217,19 @@ img.scrollUpButton {
 }
 
 div.chakra-modal__body.css-79z5gx {
-  display: flex !important;
+  /*   display: flex !important;
+ */
   margin: 0 auto !important;
 }
+/* all main text font size */
+p.chakra-text,
+a {
+  font-size: 1em !important;
+}
+
+/* navmenu text */
 .css-10hburv-MuiTypography-root {
-  font-size: 0.8rem !important;
+  font-size: 0.8em !important;
   letter-spacing: 0.1vh !important;
   font-family: "Raleway", sans-serif !important;
   font-weight: 100 !important;
@@ -217,7 +246,6 @@ div.css-1bfbv24-MuiPaper-root {
 }
 
 /* navMenu end */
-
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
@@ -306,6 +334,23 @@ div.css-1bfbv24-MuiPaper-root {
   }
 }
 
+/* title font size when very small width */
+@media screen and (max-width: 255px) {
+  h2.chakra-heading {
+    font-size: 1.2em!important;
+  }
+
+h2.chakra-heading.css-1y3e0sk {
+    font-size: 0.8em!important;
+    
+}
+
+div.carouselDiv {
+    padding: 0vh!important;
+}
+
+}
+
 @media screen and (min-width: 30em) {
   /* top image with text  */
   .css-zgv8k7 {
@@ -316,6 +361,10 @@ div.css-1bfbv24-MuiPaper-root {
   .css-kux88w {
     -webkit-flex-direction: column !important;
     flex-direction: column !important;
+  }
+  /* allproduct catalogue grid resize   */
+  .css-1hyxrix {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
@@ -331,7 +380,48 @@ div.css-1bfbv24-MuiPaper-root {
     flex-direction: column !important;
   }
 }
+/* allproduct catalogue grid resizes */
+@media screen and (min-width: 1248px) {
+  .css-1hyxrix {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+@media screen and (max-width: 840px) {
+  .css-1hyxrix {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
 
+@media screen and (max-width: 500px) {
+  .css-1hyxrix {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  div.indivProductDiv {
+    padding-left: 20vh !important;
+    padding-right: 20vh !important;
+    padding-bottom: 0vh !important;
+    padding-top: 0vh !important;
+  }
+
+  div.carouselDiv {
+    padding-bottom: 10vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .css-1hyxrix {
+    display: unset !important;
+  }
+
+  div.indivProductDiv {
+    padding: 8vh !important;
+  }
+}
+
+/* allproduct catalogue grid resize end   */
+
+/* image with text homepage resizing */
 @media screen and (min-width: 901px) {
   .css-zgv8k7 {
     -webkit-flex-direction: row !important;
@@ -343,13 +433,26 @@ div.css-1bfbv24-MuiPaper-root {
   }
 }
 
-/* footer images disappear */
+/* footer */
+/*  images to disappear */
 @media screen and (max-width: 805px) {
-  img.footerLogo {
+  img.footerLogo,
+  div.footerLogoDiv,
+  div.footerImgDiv {
     display: none;
   }
   img.footerImg {
     display: none;
   }
+
+  div.footerGrid {
+    justify-content: center;
+  }
 }
 
+/* direction for grid to change to column  */
+@media screen and (max-width: 374px) {
+  div.footerGrid {
+    flex-direction: column;
+  }
+}

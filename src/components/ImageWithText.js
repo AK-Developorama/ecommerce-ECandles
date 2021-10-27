@@ -1,10 +1,17 @@
-import React from 'react'
-import { Box, Flex, Button, Text, Image, Heading } from "@chakra-ui/react"
+import React from "react";
+import { Link } from "react-router-dom";
+import { Box, Flex, Button, Text, Image, Heading } from "@chakra-ui/react";
 
-
-const ImageWithText = ({ classname, button, reverse, image, heading, text }) => {
-
-  const reverseSection = reverse ? 'row-reverse' : 'row';
+const ImageWithText = ({
+  classname,
+  button,
+  buttonAddress,
+  reverse,
+  image,
+  heading,
+  text,
+}) => {
+  const reverseSection = reverse ? "row-reverse" : "row";
 
   return (
     <Flex
@@ -26,13 +33,15 @@ const ImageWithText = ({ classname, button, reverse, image, heading, text }) => 
         <Heading pb="2rem">{heading}</Heading>
         <Text pb="2rem">{text}</Text>
         {button ? (
-          <Button w="10rem" color="white" _hover={{ opacity: "70%" }}>
-            Find Out More
-          </Button>
+          <Link to={buttonAddress}>
+            <Button w="10rem" color="white" _hover={{ opacity: "70%" }}>
+              Find Out More
+            </Button>
+          </Link>
         ) : null}
       </Box>
     </Flex>
   );
-}
+};
 
-export default ImageWithText
+export default ImageWithText;

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Box, Grid, Text, Image, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { Box, Button } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import Hero from "../components/Hero";
 import RichText from "../components/RichText";
@@ -23,9 +23,8 @@ const HomePage = () => {
       <Hero />
       <RichText
         secondHeadingText="The sustainable candles you’ve been waiting for."
-        secondHeadingSize="3vh"
+        secondHeadingSize="1.3em"
         text="Made from 88% farm-grown Yorkshire soy + 12% UK beeswax"
-        textSize="2.5vh"
       />
       <Box
         className="shopButtonDiv"
@@ -62,6 +61,7 @@ const HomePage = () => {
       <ImageWithText
         reverse
         button
+        buttonAddress="sustainability"
         image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633967591/earthfriendcandles/bg3_llxjml.jpg"
         heading="How Are We different..."
         text="         
@@ -74,6 +74,20 @@ Vegetable-based, the wax in soy candles comes from soybean oil, ensuring they’
         //https://www.theguardian.com/environment/2011/nov/27/lucy-siegle-candle-wax-ethical
       />
       <ProductCarousel />
+      <Box
+        pb="6vh"
+        display="flex"
+        flexDir="column"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Link to="/products-catalogue">
+          <Button w="10rem" color="white" _hover={{ opacity: "70%" }}>
+            View All
+          </Button>
+        </Link>
+      </Box>
+
       <ScrollToTop showUnder={160}>
         <div className="scrollComponent">
           <img

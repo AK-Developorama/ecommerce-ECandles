@@ -11,8 +11,8 @@ const RichText = ({
 }) => {
   return (
     <Center
-      pr="2vh"
-      pl="2vh"
+      pr="6vh"
+      pl="6vh"
       className="richText"
       display="flex"
       flexDir="column"
@@ -23,7 +23,7 @@ const RichText = ({
       </Heading>
 
       {secondHeadingText ? (
-        <Heading fontSize={secondHeadingSize} py="4vh">
+        <Heading fontSize={secondHeadingSize}>
           {secondHeadingText}
         </Heading>
       ) : null}

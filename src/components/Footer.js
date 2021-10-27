@@ -30,15 +30,15 @@ const Footer = () => {
         </Box>
         <VStack p="2rem">
           <Text>COMPANY</Text>
-          <Link to="/">About Us</Link>
-          <Link to="/">Sustainability</Link>
-          <Link to="/">Contact</Link>
+          <Link to="/about-us">About Us</Link>
+          <Link to="/sustainability">Sustainability</Link>
+          <Link to="/contact">Contact</Link>
         </VStack>
         <VStack p="2rem">
           <Text>CUSTOMER CARE</Text>
-          <Link to="/customercare">Shipping & Returns</Link>
-          <Link to="/customercare">Help/FAQs</Link>
-          <Link to="/customercare">Privacy Policy</Link>
+          <Link to="/shipping-returns">Shipping & Returns</Link>
+          <Link to="/help-FAQs">Help/FAQs</Link>
+          <Link to="/privacy-policy">Privacy Policy</Link>
         </VStack>
 
         <Box
@@ -50,22 +50,22 @@ const Footer = () => {
         >
           <Image
             className="footerImg"
-            w="50vh"
+            w="36vh"
             src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633898710/earthfriendcandles/footer_faic6a.jpg"
           />
         </Box>
       </Grid>
-      <Box backgroundColor="whitesmoke">
-        <Text
-          p="1.5vh"
-          textAlign="center"
-          borderTop="1px solid grey"
-          fontSize={"1.8vh"}
-        >
+      <Box className="footerLower" backgroundColor="whitesmoke">
+        <Text p="1.5vh" textAlign="center" borderTop="1px solid grey">
           Copyright ©2021 Earthfriend Candles, All Rights Reserved.
         </Text>
-        <Text pb="1.5vh" textAlign="center" fontSize={"1.8vh"}>
-          Made with ❤ by AK Developorama
+        <Text pb="1.5vh" textAlign="center">
+          <a
+            className="developoramaLink"
+            href="https://cdpn.io/developorama/debug/f680ddde22aa41b05669b4539970b013"
+          >
+            Made with ❤ by AK Developorama
+          </a>
         </Text>
       </Box>
     </Box>

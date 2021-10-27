@@ -14,7 +14,7 @@ const Contact = () => {
 
       <ImageWithText
         reverse
-        image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633892754/earthfriendcandles/bg1_zrlcdv.jpg"
+        image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1635276595/earthfriendcandles/contact_d0n5pl.jpg"
         heading="Shipping & Returns"
         text="         
             'To reduce the carbon footprint of your order, we will ensure that the last mile of your delivery is completed on foot, by bike or electric vehicle

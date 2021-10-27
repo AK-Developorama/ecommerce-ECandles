@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ReactDOM, { render } from "react-dom";
 import HomePage from "../pages/HomePage";
 import ProductPage from "../pages/ProductPage";
 import Navbar from "./Navbar";
@@ -8,9 +7,7 @@ import Cart from "./Cart";
 import NavMenu from "./NavMenu";
 import Footer from "./Footer";
 import AlwaysScrollToTop from "./AlwaysScrollToTop";
-import CustomerCare from "../pages/CustomerCare";
 import AllProductsCatalogue from "../pages/AllProductsCatalogue";
-import RichText from "../components/RichText";
 import ShippingReturns from '../pages/ShippingReturns'
 import Contact from "../pages/Contact";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
@@ -57,8 +54,8 @@ function App() {
               <HomePage />
             </Route>
           </Switch>
-{/*           <Footer />
- */}        </AlwaysScrollToTop>
+          <Footer />
+        </AlwaysScrollToTop>
       </Router>
     </div>
   );

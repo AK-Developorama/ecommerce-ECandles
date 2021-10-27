@@ -1,13 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Box, Grid, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Grid, Text, Image } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 import RichText from "../components/RichText";
-import ProductCarousel from "../components/ProductCarousel";
 import ScrollToTop from "react-scroll-up";
+import ProductCarousel from "../components/ProductCarousel";
+
 
 const AllProductsCatalogue = () => {
-  const { fetchAllProducts, products } = useContext(ShopContext);
+  const { fetchAllProducts, products} = useContext(ShopContext);
 
   useEffect(() => {
     fetchAllProducts();
@@ -18,18 +19,33 @@ const AllProductsCatalogue = () => {
 
   return (
     <div className="allProductsCatalogueDiv">
-      <Box p="2rem">
-        <Grid py={"16vh"} templateColumns={["repeat(1fr)", "repeat(3, 1fr)"]}>
+      <Box>
+        <RichText
+          heading="EARTHFRIEND CANDLES"
+          headingSize="1.7em"
+          secondHeadingText="Explore our stunning range of non-toxic candles."
+          secondHeadingSize="1.2em"
+        />
+
+
+        <ProductCarousel/>
+
+        <Grid
+          className="allProductsGrid"
+          templateColumns={["repeat(1fr)", "repeat(4, 1fr)"]}
+        >
           {products.map((product) => (
             <Link to={`/products/${product.handle}`} key={product.id}>
               <Box
+                className="indivProductDiv"
                 _hover={{ opacity: "80%" }}
                 textAlign="center"
                 position="relative"
               >
-                <Image src={product.images[0].src} w="50%" />
+                <Image src={product.images[0].src} w="100%" />
                 <Text
-                  fontTransform="uppercase"
+                  className="productTitle"
+                  py="7vh"
                   fontWeight="bold"
                   position="center"
                   w="100%"
@@ -39,9 +55,9 @@ const AllProductsCatalogue = () => {
               </Box>
             </Link>
           ))}
+
         </Grid>
 
-        <ProductCarousel />
         <ScrollToTop showUnder={160}>
           <div className="scrollComponent">
             <img

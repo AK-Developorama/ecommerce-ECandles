@@ -5,7 +5,7 @@ import RichText from "../components/RichText";
 const Hero = () => {
   return (
     <Box className="heroTitleImage" backgroundColor="white" w="100%">
-      <RichText heading="EARTHFRIEND CANDLES" headingSize="4vh" />
+      <RichText heading="EARTHFRIEND CANDLES" headingSize="1.7em" />
       <Box
         className="heroImg"
         backgroundColor="whitesmoke"
