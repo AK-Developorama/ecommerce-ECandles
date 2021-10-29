@@ -136,45 +136,7 @@ const NavMenu = () => {
                         <ListItemText primary="Contact" sx={{ my: 2 }} />
                       </Link>
                     </ListItemButton>
-                  </Box>
-                )}
 
-                {/* CUSTOMER CARE */}
-                <ListItemButton
-                  alignItems="flex-start"
-                  onClick={() => setOpen(!open)}
-                  sx={{
-                    pt: 2.5,
-                    pb: 2.5,
-                    "&:hover, &:focus": {
-                      "& svg": { opacity: open ? 1 : 0 },
-                    },
-                  }}
-                >
-                  <ListItemText
-                    primary="CUSTOMER CARE"
-                    secondary=""
-                    secondaryTypographyProps={{
-                      noWrap: true,
-                      color: open
-                        ? "rgba(136,136,136,1)"
-                        : "rgba(255,255,255,1)",
-                    }}
-                    sx={{ my: 2 }}
-                  />
-
-                  <KeyboardArrowDown
-                    sx={{
-                      ml: 1,
-                      my: 1.5,
-                      opacity: 1,
-                      transform: open ? "rotate(-180deg)" : "rotate(0)",
-                      transition: "0.2s",
-                    }}
-                  />
-                </ListItemButton>
-                {open && (
-                  <Box>
                     {/*Shipping & Returns */}
                     <ListItemButton
                       alignItems="flex-start"
@@ -190,18 +152,7 @@ const NavMenu = () => {
                         />
                       </Link>
                     </ListItemButton>
-                    {/* Help/FAQs*/}
-                    <ListItemButton
-                      alignItems="flex-start"
-                      sx={{
-                        pt: 0,
-                        pb: 0.2,
-                      }}
-                    >
-                      <Link to="help-FAQs">
-                        <ListItemText primary="Help/FAQs" sx={{ my: 2 }} />
-                      </Link>
-                    </ListItemButton>
+
                     {/* Privacy Policy*/}
                     <ListItemButton
                       alignItems="flex-start"
@@ -216,6 +167,7 @@ const NavMenu = () => {
                     </ListItemButton>
                   </Box>
                 )}
+
               </Paper>
             </ThemeProvider>
           </Box>

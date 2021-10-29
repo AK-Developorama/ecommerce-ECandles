@@ -11,7 +11,6 @@ import AllProductsCatalogue from "../pages/AllProductsCatalogue";
 import ShippingReturns from '../pages/ShippingReturns'
 import Contact from "../pages/Contact";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
-import HelpFAQs from "../pages/HelpFAQs";
 import AboutUs from "../pages/About Us";
 import Sustainability from "../pages/Sustainability";
 
@@ -30,9 +29,7 @@ function App() {
             <Route path="/shipping-returns">
               <ShippingReturns />
             </Route>
-            <Route path="/help-FAQs">
-              <HelpFAQs />
-            </Route>
+          
             <Route path="/privacy-policy">
               <PrivacyPolicy />
             </Route>

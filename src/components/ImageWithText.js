@@ -16,7 +16,7 @@ const ImageWithText = ({
   return (
     <Flex
       className={classname}
-      pt="8vh"
+      pt="6vh"
       flexDir={["column", reverseSection]}
       w="100%"
     >

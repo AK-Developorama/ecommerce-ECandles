@@ -36,6 +36,7 @@ const HomePage = () => {
       >
         <Link to="/products-catalogue">
           <Button
+            mb="3vh"
             className="shopButton"
             w="10rem"
             color="white"
@@ -49,14 +50,14 @@ const HomePage = () => {
       <ImageWithText
         image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633892754/earthfriendcandles/bg1_zrlcdv.jpg"
         heading="Why Soy Candles?"
-        text="         
-            'Most candles are made from paraffin wax, a petroleum by-product of crude oil, and emit large amounts of particulate pollution when burned — a major ingredient in air pollution. Add in metal-based wicks, artificial scents and boosters, and the notion of candle purity goes up in flames.' (The Guardian)
+        text={         
+            `Most candles are made from paraffin wax, a petroleum by-product of crude oil, and emit large amounts of particulate pollution when burned — a major ingredient in air pollution. 
+            
+            'Add in metal-based wicks, artificial scents and boosters, and the notion of candle purity goes up in flames.' (The Guardian)
 
-            And remember our soy wax candles tend to burn for 50% longer than parrafin ones!
+            And remember our soy wax candles tend to burn for 50% longer than parrafin ones!`
           
-          "
-
-        //https://www.theguardian.com/environment/2011/nov/27/lucy-siegle-candle-wax-ethical
+          }
       />
       <ImageWithText
         reverse
@@ -64,14 +65,13 @@ const HomePage = () => {
         buttonAddress="sustainability"
         image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1633967591/earthfriendcandles/bg3_llxjml.jpg"
         heading="How Are We different..."
-        text="         
-            'Our non-toxic soy candles are created without any synthetics, making for a cleaner flame and more transparent ingredients list.
-Vegetable-based, the wax in soy candles comes from soybean oil, ensuring they’re free of potentially toxic chemicals such as ones found in paraffin. Producing a slow burn with no residue or sooty smokiness thanks to their cotton wicks, these natural candles tend to last longer too' (The Guardian)
-            And remember our soy wax candles tend to burn for 50% longer than parrafin ones!
-          
-          "
+        text={`         
+             Our non-toxic soy candles are created without any synthetics, making for a cleaner flame and more transparent ingredients list. 
 
-        //https://www.theguardian.com/environment/2011/nov/27/lucy-siegle-candle-wax-ethical
+Vegetable-based, the wax in soy candles comes from soybean oil, ensuring they’re free of potentially toxic chemicals such as ones found in paraffin. Producing a slow burn with no residue or sooty smokiness thanks to their cotton wicks, these natural candles tend to last longer too!
+
+            'And remember our soy wax candles tend to burn for 50% longer than parrafin ones!' (The Guardian)
+          `}
       />
       <ProductCarousel />
       <Box

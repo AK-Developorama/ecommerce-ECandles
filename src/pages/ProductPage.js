@@ -44,11 +44,7 @@ const ProductPage = () => {
         py="8vh"
         templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
       >
-        <Flex
-          className="imageDiv"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Flex className="imageDiv" justifyContent="center" alignItems="center">
           <Image src={product.images[0].src} />
         </Flex>
         <Box
@@ -61,7 +57,7 @@ const ProductPage = () => {
         >
           <Heading pb="2rem">{product.title}</Heading>
           <Text fontWeight="bold" pb="2rem">
-            ${product.variants[0].price}
+            £{product.variants[0].price}
           </Text>
           <Text color="gray.500" pb="2rem">
             {product.description}
@@ -77,20 +73,35 @@ const ProductPage = () => {
           </Button>
         </Box>
       </Grid>
-   <Box
+      <Box
         pb="6vh"
         display="flex"
         flexDir="column"
         alignItems="center"
         justifyContent="center"
       >
-      <RichText
-        heading="'Soy wax is rated the best non-toxic candle ingredient!' (The Guardian)"
-        headingSize="2.5vh"
-      />
-      <Center pb="2rem">You Might Also Like:</Center>
-   
+        <RichText
+          heading="'Soy wax is rated the best non-toxic candle ingredient!' (The Guardian)"
+          headingSize="2.5vh"
+        />
+        <Center pb="2rem">You Might Also Like:</Center>
+
         <ProductCarousel />
+{/* linkto full catalogue button */}
+        <Box
+          pb="6vh"
+          display="flex"
+          flexDir="column"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Link to="/products-catalogue">
+            <Button w="10rem" color="white" _hover={{ opacity: "70%" }}>
+              View All
+            </Button>
+          </Link>
+        </Box>
+
         <ScrollToTop showUnder={160}>
           <div className="scrollComponent">
             <img

@@ -91,6 +91,13 @@ img.chakra-image.css-0 {
   max-width: 50%;
 }
 
+/* shippingImg */
+img.shippingImg {
+  max-width: 100%;
+  max-height: 100% !important;
+}
+
+/* privacy policy  */
 /* ---- carousel ---- */
 /* hidden thumb control div */
 div.thumbs-wrapper.axis-vertical {
@@ -276,6 +283,58 @@ div.css-1bfbv24-MuiPaper-root {
   }
 }
 
+/* contact form */
+div.contactFormDiv,
+input.form-control.formInput {
+  font-size: 1em !important;
+  color: #636161 !important;
+}
+
+#contact-form > div:nth-child(2) > div > input,
+#contact-form > div:nth-child(1) > div:nth-child(1) > input, #contact-form > div:nth-child(1) > div:nth-child(2) > input {
+  width: 95%;
+  background-color: whitesmoke;
+}
+
+/* color: $textColor !important;
+border-color: $textColor;
+background-color: $headerFooterColor; */
+div.contactDiv {
+  overflow: hidden;
+}
+
+img.contactImg {
+  max-width: 50%;
+  height: 100%;
+}
+
+/* error messages */
+span.errorMessage {
+  font-size: 2vh;
+  color: red;
+}
+
+#contact-form > div:nth-child(3) > div > span {
+  padding-left: 0;
+}
+
+/* message box */
+textarea.form-control.formInput {
+  background-color: whitesmoke;
+  width: 95%;
+  height: 25vh;
+}
+
+textarea.form-control.formInput:focus {
+  border-color: #636161;
+}
+
+input {
+  color: #636161 !important;
+}
+
+/* end of contact form */
+/* animation fade in hero image  */
 .tracking-in-expand-fwd {
   -webkit-animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s both;
   animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s both;

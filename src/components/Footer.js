@@ -37,7 +37,6 @@ const Footer = () => {
         <VStack p="2rem">
           <Text>CUSTOMER CARE</Text>
           <Link to="/shipping-returns">Shipping & Returns</Link>
-          <Link to="/help-FAQs">Help/FAQs</Link>
           <Link to="/privacy-policy">Privacy Policy</Link>
         </VStack>
 

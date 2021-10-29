@@ -1,27 +1,35 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Box, Grid, Text, Image, Button } from "@chakra-ui/react";
+import ContactForm from "../components/ContactForm";
+import { Box, Flex, Button, Text, Image, Heading } from "@chakra-ui/react";
 import RichText from "../components/RichText";
-import ImageWithText from "../components/ImageWithText";
 
 const Contact = () => {
   return (
-    <Box pb="6vh" className="ContactPage">
+    <Box pb="6vh" w="100%" className="contactDiv">
       <RichText
-        secondHeadingText="We are here to help."
+        secondHeadingText="We are here to help. Please use the form to get in touch."
         secondHeadingSize="3vh"
       />
 
-      <ImageWithText
-        reverse
-        image="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1635276595/earthfriendcandles/contact_d0n5pl.jpg"
-        heading="Shipping & Returns"
-        text="         
-            'To reduce the carbon footprint of your order, we will ensure that the last mile of your delivery is completed on foot, by bike or electric vehicle
-    Delivered within 3-5 working days
-    Eco deliveries take place 7 days a week
-    Option will show at checkout if available to your selected post code"
-      />
+      <Flex className="contactDiv" pt="6vh" w="100%" flexDirection="row">
+        <Box
+          className="contactFormDiv"
+          w="50%"
+          display="flex"
+          px="2rem"
+          flexDir="column"
+          justifyContent="right"
+          alignItems="right"
+        >
+          <ContactForm />
+        </Box>
+        
+        <Image
+          alt="contact image of hand holding candle"
+          className="contactImg"
+          src="https://res.cloudinary.com/dwtu8mm8m/image/upload/v1635276595/earthfriendcandles/contact_d0n5pl.jpg"
+        />
+      </Flex>
     </Box>
   );
 };
