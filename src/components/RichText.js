@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Text, Center } from "@chakra-ui/react";
+import {Heading, Text, Center } from "@chakra-ui/react";
 
 const RichText = ({
   heading,

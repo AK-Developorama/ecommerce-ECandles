@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { Box, Button } from "@chakra-ui/react";
 import emailjs from "emailjs-com";

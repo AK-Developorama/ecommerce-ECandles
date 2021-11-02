@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Box, Grid, Text, Image, Button } from "@chakra-ui/react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Box } from "@chakra-ui/react";
 import RichText from "../components/RichText";
 import ImageWithText from "../components/ImageWithText";
 import ScrollToTop from "react-scroll-up";

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Box from "@mui/material/Box";
-import { styled, ThemeProvider, createTheme } from "@mui/material/styles";
-import List from "@mui/material/List";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Paper from "@mui/material/Paper";

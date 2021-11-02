@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
-import { Box, Flex, Button, Text, Image, Heading } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import RichText from "../components/RichText";
 import ScrollToTop from "react-scroll-up";
 

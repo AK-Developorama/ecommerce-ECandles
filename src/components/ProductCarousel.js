@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, Component } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { Box, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Text, Image } from "@chakra-ui/react";
 import { ShopContext } from "../context/shopContext";
 
 const ProductCarousel = () => {

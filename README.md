@@ -1,7 +1,12 @@
 ### Intro
 
+My goal was to help out a friend and her sustainable candle business, using both React and the Shopify API.
+
+So I have created a private Shopify app and linked my React project to it thru the API and Shopify buy.
+
 ### Live Site
 
+Hosted on Netlify: 
 
 ### Dependencies
 
