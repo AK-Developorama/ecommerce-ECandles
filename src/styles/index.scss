@@ -1,0 +1,690 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+/* sass variables */
+$textColor: #636161;
+$buttonColor: #888888;
+$whiteText: white;
+$headerFooterColor: whitesmoke;
+
+/* navbar */
+div.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 1 !important;
+}
+/* body */
+
+*,
+*::before,
+::after {
+  word-wrap: normal !important;
+}
+
+body {
+  position: absolute;
+  height: 100%;
+  margin: 0;
+  min-width: 100%;
+  font-family: "Raleway", sans-serif !important;
+  width: 100% !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $textColor !important;
+}
+
+p {
+  white-space: pre-line !important;
+}
+
+code {
+  font-family: "Julius Sans One", sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* titles */
+h2.chakra-heading {
+  letter-spacing: 0.5vh !important;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 100 !important;
+  color: $textColor !important;
+  word-wrap: nowrap !important;
+  text-align: center;
+}
+
+/* third heading homepage  */
+p.chakra-text.css-djdsir {
+  font-size: 1.1em !important;
+  padding-top: 4vh;
+}
+
+/* hero image */
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+img.fade-in.css-11ze7cv {
+  width: 80vh !important;
+}
+
+/* shop button */
+button.chakra-button {
+  background-color: $buttonColor;
+  color: $whiteText;
+}
+
+/* image text containers */
+img.chakra-image.css-0 {
+  object-fit: contain;
+  max-width: 50%;
+}
+/* shippingImg */
+img.shippingImg {
+  max-width: 100%;
+  max-height: 100% !important;
+}
+
+@media screen and (max-width: 840px) {
+  img.shippingImg,
+  img.privacyPolicyImg {
+    display: none;
+  }
+
+  .css-h6r4ts {
+    width: 100% !important;
+  }
+  .css-4lx99g {
+    flex-direction: column !important;
+  }
+}
+
+/* privacy policy  */
+
+/* ---- carousel ---- */
+
+/* hidden thumb control div */
+div.thumbs-wrapper.axis-vertical {
+  display: none;
+}
+p.carousel-status {
+  display: none;
+}
+/* end of hidden components */
+.carousel .slide img {
+  width: 50% !important;
+}
+
+div.carousel.carousel-slider {
+  max-width: 50vh !important;
+}
+
+/* indiv product only */
+div.carouselDiv {
+  max-width: 100%;
+}
+
+/* entire component div */
+div.carousel-root {
+  z-index: -1 !important;
+  margin-top: 10vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+/* all products */
+/* indiv product div */
+div.indivProductDiv {
+  padding-left: 10vh !important;
+    padding-right: 10vh !important;
+    padding-top: 8vh;
+    padding-bottom: 7vh;
+
+}
+
+#root
+  > div
+  > div.productPageDiv
+  > div.gridDiv.css-1jkh0ie
+  > div.imageDiv.css-gmuwbf
+  > img {
+  max-width: 50%;
+}
+/* text transform */
+p.chakra-text.productTitle {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+ul.control-dots {
+  display: none !important;
+}
+
+/* arrows */
+button.control-arrow {
+  z-index: 0 !important;
+  font-size: 1em !important;
+  padding: 0.2vh !important;
+  background: #88888857 !important;
+  opacity: 1 !important;
+}
+control-arrow control-prev {
+  z-index: 0 !important;
+}
+.carousel.slider-wrapper {
+  width: 50%;
+}
+
+button.control-arrow:hover {
+  background: $buttonColor !important;
+}
+
+/* div with image in carousel */
+div.css-13y17wt {
+  z-index: -1000 !important;
+}
+
+/* carousel end */
+/* footer */
+@media screen and (max-width: 183px) {
+  div.footerGrid {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 190px) {
+  div.footerGrid {
+    font-size: 6vw !important;
+  }
+}
+
+div.footer {
+  background-color: $headerFooterColor !important;
+}
+
+/* footer image */
+img.footerLogo {
+  object-fit: contain;
+  height: calc(10px + 5vh);
+}
+
+img.scrollUpButton {
+  height: calc(10px + 5vh);
+}
+
+div.footer {
+  font-size: calc(3px + 0.6em) !important;
+}
+
+/* middle links */
+/* div.chakra-stack.css-1ky8oes{
+} */
+
+/* navMenu */
+.chakra-slide.chakra-modal__content.css-6e3h0h {
+  background: $buttonColor !important ;
+}
+
+/* arrow */
+.css-dy6fgq-MuiButtonBase-root-MuiListItemButton-root:hover svg,
+.css-dy6fgq-MuiButtonBase-root-MuiListItemButton-root:focus svg {
+  opacity: 1 !important;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1wb5pax-MuiSvgIcon-root:focus {
+  color: $textColor !important;
+  opacity: 1 !important;
+}
+.css-1wb5pax-MuiSvgIcon-root {
+  color: $textColor;
+}
+.css-1bfbv24-MuiPaper-root {
+  color: $textColor !important;
+}
+.css-wty661-MuiSvgIcon-root:active {
+  color: $textColor !important;
+}
+
+.css-wty661-MuiSvgIcon-root:hover {
+  color: $textColor !important;
+  opacity: 1 !important;
+}
+
+div.chakra-modal__body.css-79z5gx {
+  margin: 0 auto !important;
+}
+/* all main text font size */
+p.chakra-text,
+a {
+  font-size: 1em !important;
+}
+/* make title padding 0 when on very small screen */
+
+/* direction for grid to change to column  */
+@media screen and (max-width: 275px) {
+  #chakra-modal--body-1 > div > div > a > div > h2,
+  .css-1dqmct2 {
+    padding: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* navmenu text */
+.css-10hburv-MuiTypography-root {
+  font-size: 0.8em !important;
+  letter-spacing: 0.1vh !important;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 100 !important;
+  color: $whiteText !important;
+  word-wrap: nowrap !important;
+}
+
+div.css-1bfbv24-MuiPaper-root {
+  background-color: $buttonColor !important;
+}
+
+.css-1mttud9 {
+  background-color: $buttonColor !important;
+}
+
+/* navMenu end */
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* shopping cart */
+#chakra-modal--header-2,
+.css-9fgtzh {
+  font-size: 2.7vh !important;
+  letter-spacing: 0.1vh !important;
+  text-transform: uppercase !important;
+}
+
+/* contact form */
+
+div.contactFormDiv,
+input.form-control.formInput {
+  font-size: 1em !important;
+  color: $textColor !important;
+}
+
+#contact-form > div:nth-child(2) > div > input,
+#contact-form > div:nth-child(1) > div:nth-child(1) > input,
+#contact-form > div:nth-child(1) > div:nth-child(2) > input {
+  width: 95%;
+  background-color: $headerFooterColor;
+}
+
+div.contactDiv {
+  overflow: hidden;
+}
+
+img.contactImg {
+  max-width: 50%;
+  height: 100%;
+}
+/* error messages */
+span.errorMessage {
+  font-size: 2vh;
+  color: red;
+}
+
+#contact-form > div:nth-child(3) > div > span {
+  padding-left: 0;
+}
+
+/* message box */
+textarea.form-control.formInput {
+  background-color: $headerFooterColor;
+  width: 95%;
+  height: 25vh;
+}
+
+textarea.form-control.formInput:focus {
+  border-color: $textColor;
+}
+
+input {
+  color: $textColor !important;
+}
+
+/* end of contact form */
+
+/* animation fade in hero image  */
+.tracking-in-expand-fwd {
+  -webkit-animation: tracking-in-expand-fwd 1s
+    cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s both;
+  animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s
+    both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2021-1-8 11:54:30
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERIES */
+
+/* image with text rearrange */
+@media screen and (max-width: 900px) {
+  /* hero image  */
+  img.fade-in {
+    width: 100%;
+  }
+
+  div.imageTextDiv {
+    flex-direction: column !important;
+  }
+  div.textDiv.css-1b0it1t {
+    width: 100% !important;
+  }
+  img.chakra-image.css-0 {
+    object-fit: contain;
+    max-width: 100%;
+  }
+}
+
+/* have to overwrite the chakra ui rules : */
+@media screen and (min-width: 48em) {
+  .css-1a4d118 {
+    font-size: 3vh !important;
+  }
+}
+
+/* title font size when very small width */
+@media screen and (max-width: 255px) {
+  h2.chakra-heading {
+    font-size: 1.2em !important;
+  }
+
+  h2.chakra-heading.css-1y3e0sk {
+    font-size: 0.8em !important;
+  }
+
+  div.carouselDiv {
+    padding: 0vh !important;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  /* allproduct catalogue grid resize   */
+  .css-1hyxrix {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ultra small screen font resizes */
+@media screen and (max-width: 200px) {
+  /* contact form */
+  div.contactFormDiv,
+  span.errorMessage {
+    font-size: 8vw !important;
+  }
+
+  .css-189pm9t {
+    display: none;
+  }
+
+  p.chakra-text.css-9o3j02,
+  p.chakra-text.css-12vachi {
+    font-size: 6vw !important;
+  }
+
+  #root
+    > div
+    > div.homePage.css-0
+    > div.heroTitleImage.css-at1bvb
+    > div.richText.css-1dqmct2
+    > h2,
+  .css-1ux083n,
+  h2.chakra-heading {
+    font-size: 8vw !important ;
+  }
+
+  .css-10i2o2g {
+    font-size: 1em !important;
+  }
+
+  p.chakra-text.css-djdsir,
+  p.chakra-text,
+  div.css-11vfnpl {
+    font-size: 7vw !important;
+  }
+  #root
+    > div
+    > div.productPageDiv
+    > div.css-1j62oce
+    > div.richText.css-1dqmct2
+    > h2 {
+    font-size: 7vw !important;
+  }
+  button.chakra-button {
+    width: 6rem !important;
+    font-size: 0.7em !important;
+  }
+}
+
+/*indiv  product page */
+#root
+  > div
+  > div.productPageDiv
+  > div.gridDiv.css-1jkh0ie
+  > div.productDescriptionDiv.css-5hhfsl
+  > h2 {
+  text-transform: uppercase;
+  font-size: 2vh;
+}
+
+#root
+  > div
+  > div.productPageDiv
+  > div.css-1j62oce
+  > div.richText.css-1dqmct2
+  > h2 {
+  padding: 1em;
+}
+
+#root
+  > div
+  > div.productPageDiv
+  > div.gridDiv.css-1jkh0ie
+  > div.imageDiv.css-gmuwbf {
+  padding-bottom: 5vh;
+}
+
+/* images with text on homepage resize: */
+@media screen and (min-width: 30em) {
+  .css-1koamhx,
+  .css-1dlv0ff {
+    -webkit-flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .css-1koamhx {
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+  }
+
+  .css-1dlv0ff {
+    -webkit-flex-direction: row-reverse !important;
+    -ms-flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important;
+  }
+}
+
+/* allproduct catalogue grid resizes */
+@media screen and (min-width: 1248px) {
+  .css-1hyxrix {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .css-1hyxrix {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* contact form */
+  div.contactFormDiv,
+  textarea.form-control.formInput,
+  #contact-form > div:nth-child(2) > div > input,
+  #contact-form > div:nth-child(1) > div:nth-child(1) > input,
+  #contact-form > div:nth-child(1) > div:nth-child(2) > input {
+    width: 100%;
+  }
+
+  img.contactImg {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 670px) {
+ 
+
+  div.indivProductDiv {
+    padding-left: 7vh !important;
+    padding-right: 7vh !important;
+    padding-top: 8vh !important;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .css-1hyxrix {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  div.indivProductDiv {
+    padding-left: 20vh !important;
+    padding-right: 20vh !important;
+    padding-bottom: 0vh !important;
+    padding-top: 0vh !important;
+  }
+
+  div.carouselDiv {
+    padding-bottom: 10vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .css-1hyxrix {
+    display: unset !important;
+  }
+
+  div.indivProductDiv {
+    padding: 8vh !important;
+  }
+
+  /* images on products cat */
+  div.indivProductDiv {
+    padding: 8vh !important;
+  }
+}
+
+
+@media screen and (max-width: 300px) {
+ 
+  /* images on products cat */
+  div.indivProductDiv {
+    padding: 3vh !important;
+  }
+}
+
+
+
+
+/* allproduct catalogue grid resize end   */
+
+/* image with text homepage resizing */
+@media screen and (min-width: 901px) {
+}
+
+/* footer */
+
+/* fonts */
+
+div.footerGrid {
+  font-size: 1.1em;
+}
+/*  images to disappear */
+@media screen and (max-width: 805px) {
+  img.footerLogo,
+  div.footerLogoDiv,
+  div.footerImgDiv {
+    display: none;
+  }
+  img.footerImg {
+    display: none;
+  }
+
+  div.footerGrid {
+    justify-content: center;
+  }
+}
+
+/* direction for grid to change to column  */
+@media screen and (max-width: 374px) {
+  div.footerGrid {
+    flex-direction: column;
+  }
+}
