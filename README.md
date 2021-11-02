@@ -6,7 +6,7 @@ So I have created a private Shopify app and linked my React project to it thru t
 
 ### Live Site
 
-Hosted on Netlify: 
+Hosted on Netlify: https://earthfriend-candles.netlify.app/
 
 ### Dependencies
 
