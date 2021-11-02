@@ -11,6 +11,7 @@ const RichText = ({
 }) => {
   return (
     <Center
+      px="0.5em"
       pr="6vh"
       pl="6vh"
       className="richText"
@@ -23,9 +24,7 @@ const RichText = ({
       </Heading>
 
       {secondHeadingText ? (
-        <Heading fontSize={secondHeadingSize}>
-          {secondHeadingText}
-        </Heading>
+        <Heading fontSize={secondHeadingSize}>{secondHeadingText}</Heading>
       ) : null}
       {text ? (
         <Text fontSize={textSize} pb="4vh">

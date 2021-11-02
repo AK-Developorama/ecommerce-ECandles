@@ -95,6 +95,20 @@ img.shippingImg {
   max-height: 100% !important;
 }
 
+@media screen and (max-width: 840px) {
+  img.shippingImg,
+  img.privacyPolicyImg {
+    display: none;
+  }
+
+  .css-h6r4ts {
+    width: 100% !important;
+  }
+  .css-4lx99g {
+    flex-direction: column !important;
+  }
+}
+
 /* privacy policy  */
 
 /* ---- carousel ---- */
@@ -115,6 +129,11 @@ div.carousel.carousel-slider {
   max-width: 50vh !important;
 }
 
+/* indiv product only */
+div.carouselDiv {
+  max-width: 100%;
+}
+
 /* entire component div */
 div.carousel-root {
   z-index: -1 !important;
@@ -128,13 +147,26 @@ div.carousel-root {
 /* all products */
 /* indiv product div */
 div.indivProductDiv {
-  padding: 10vh !important;
+  padding-left: 10vh !important;
+    padding-right: 10vh !important;
+    padding-top: 8vh;
+    padding-bottom: 7vh;
+
 }
 
+#root
+  > div
+  > div.productPageDiv
+  > div.gridDiv.css-1jkh0ie
+  > div.imageDiv.css-gmuwbf
+  > img {
+  max-width: 50%;
+}
 /* text transform */
 p.chakra-text.productTitle {
   text-transform: uppercase;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 ul.control-dots {
@@ -167,6 +199,17 @@ div.css-13y17wt {
 
 /* carousel end */
 /* footer */
+@media screen and (max-width: 183px) {
+  div.footerGrid {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 190px) {
+  div.footerGrid {
+    font-size: 6vw !important;
+  }
+}
 
 div.footer {
   background-color: $headerFooterColor !important;
@@ -221,14 +264,23 @@ div.footer {
 }
 
 div.chakra-modal__body.css-79z5gx {
-  /*   display: flex !important;
- */
   margin: 0 auto !important;
 }
 /* all main text font size */
 p.chakra-text,
 a {
   font-size: 1em !important;
+}
+/* make title padding 0 when on very small screen */
+
+/* direction for grid to change to column  */
+@media screen and (max-width: 275px) {
+  #chakra-modal--body-1 > div > div > a > div > h2,
+  .css-1dqmct2 {
+    padding: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
 }
 
 /* navmenu text */
@@ -259,7 +311,16 @@ div.css-1bfbv24-MuiPaper-root {
   }
 }
 
+/* shopping cart */
+#chakra-modal--header-2,
+.css-9fgtzh {
+  font-size: 2.7vh !important;
+  letter-spacing: 0.1vh !important;
+  text-transform: uppercase !important;
+}
+
 /* contact form */
+
 div.contactFormDiv,
 input.form-control.formInput {
   font-size: 1em !important;
@@ -267,15 +328,11 @@ input.form-control.formInput {
 }
 
 #contact-form > div:nth-child(2) > div > input,
-#contact-form > div:nth-child(1) > div:nth-child(1) > input, #contact-form > div:nth-child(1) > div:nth-child(2) > input {
-    width: 95%;
-      background-color: $headerFooterColor;
-
+#contact-form > div:nth-child(1) > div:nth-child(1) > input,
+#contact-form > div:nth-child(1) > div:nth-child(2) > input {
+  width: 95%;
+  background-color: $headerFooterColor;
 }
-
-/* color: $textColor !important;
-border-color: $textColor;
-background-color: $headerFooterColor; */
 
 div.contactDiv {
   overflow: hidden;
@@ -408,44 +465,148 @@ input {
 }
 
 @media screen and (min-width: 30em) {
-  /* top image with text  */
-  .css-zgv8k7 {
-    -webkit-flex-direction: column !important;
-    flex-direction: column !important;
-  }
-  /* bottom image with text  */
-  .css-kux88w {
-    -webkit-flex-direction: column !important;
-    flex-direction: column !important;
-  }
   /* allproduct catalogue grid resize   */
   .css-1hyxrix {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
-@media screen and (min-width: 50em) {
-  /* top image with text  */
-  .css-zgv8k7 {
-    -webkit-flex-direction: column !important;
-    flex-direction: column !important;
+/* ultra small screen font resizes */
+@media screen and (max-width: 200px) {
+  /* contact form */
+  div.contactFormDiv,
+  span.errorMessage {
+    font-size: 8vw !important;
   }
-  /* bottom image with text  */
-  .css-kux88w {
+
+  .css-189pm9t {
+    display: none;
+  }
+
+  p.chakra-text.css-9o3j02,
+  p.chakra-text.css-12vachi {
+    font-size: 6vw !important;
+  }
+
+  #root
+    > div
+    > div.homePage.css-0
+    > div.heroTitleImage.css-at1bvb
+    > div.richText.css-1dqmct2
+    > h2,
+  .css-1ux083n,
+  h2.chakra-heading {
+    font-size: 8vw !important ;
+  }
+
+  .css-10i2o2g {
+    font-size: 1em !important;
+  }
+
+  p.chakra-text.css-djdsir,
+  p.chakra-text,
+  div.css-11vfnpl {
+    font-size: 7vw !important;
+  }
+  #root
+    > div
+    > div.productPageDiv
+    > div.css-1j62oce
+    > div.richText.css-1dqmct2
+    > h2 {
+    font-size: 7vw !important;
+  }
+  button.chakra-button {
+    width: 6rem !important;
+    font-size: 0.7em !important;
+  }
+}
+
+/*indiv  product page */
+#root
+  > div
+  > div.productPageDiv
+  > div.gridDiv.css-1jkh0ie
+  > div.productDescriptionDiv.css-5hhfsl
+  > h2 {
+  text-transform: uppercase;
+  font-size: 2vh;
+}
+
+#root
+  > div
+  > div.productPageDiv
+  > div.css-1j62oce
+  > div.richText.css-1dqmct2
+  > h2 {
+  padding: 1em;
+}
+
+#root
+  > div
+  > div.productPageDiv
+  > div.gridDiv.css-1jkh0ie
+  > div.imageDiv.css-gmuwbf {
+  padding-bottom: 5vh;
+}
+
+/* images with text on homepage resize: */
+@media screen and (min-width: 30em) {
+  .css-1koamhx,
+  .css-1dlv0ff {
     -webkit-flex-direction: column !important;
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
 }
+
+@media screen and (min-width: 900px) {
+  .css-1koamhx {
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+  }
+
+  .css-1dlv0ff {
+    -webkit-flex-direction: row-reverse !important;
+    -ms-flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important;
+  }
+}
+
 /* allproduct catalogue grid resizes */
 @media screen and (min-width: 1248px) {
   .css-1hyxrix {
     grid-template-columns: repeat(4, 1fr) !important;
   }
 }
+
 @media screen and (max-width: 840px) {
   .css-1hyxrix {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+  /* contact form */
+  div.contactFormDiv,
+  textarea.form-control.formInput,
+  #contact-form > div:nth-child(2) > div > input,
+  #contact-form > div:nth-child(1) > div:nth-child(1) > input,
+  #contact-form > div:nth-child(1) > div:nth-child(2) > input {
+    width: 100%;
+  }
+
+  img.contactImg {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 670px) {
+ 
+
+  div.indivProductDiv {
+    padding-left: 7vh !important;
+    padding-right: 7vh !important;
+    padding-top: 8vh !important;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -473,23 +634,38 @@ input {
   div.indivProductDiv {
     padding: 8vh !important;
   }
+
+  /* images on products cat */
+  div.indivProductDiv {
+    padding: 8vh !important;
+  }
 }
+
+
+@media screen and (max-width: 300px) {
+ 
+  /* images on products cat */
+  div.indivProductDiv {
+    padding: 3vh !important;
+  }
+}
+
+
+
 
 /* allproduct catalogue grid resize end   */
 
 /* image with text homepage resizing */
 @media screen and (min-width: 901px) {
-  .css-zgv8k7 {
-    -webkit-flex-direction: row !important;
-    flex-direction: row !important;
-  }
-  .css-kux88w {
-    -webkit-flex-direction: row-reverse !important;
-    flex-direction: row-reverse !important;
-  }
 }
 
 /* footer */
+
+/* fonts */
+
+div.footerGrid {
+  font-size: 1.1em;
+}
 /*  images to disappear */
 @media screen and (max-width: 805px) {
   img.footerLogo,

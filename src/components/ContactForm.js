@@ -150,7 +150,7 @@ const ContactForm = () => {
           justifyContent="center"
         >
           <Button
-            mb="3vh"
+            mb="5vh"
             className="submit-btn"
             w="10rem"
             type="submit"

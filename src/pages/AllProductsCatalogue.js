@@ -15,7 +15,7 @@ const AllProductsCatalogue = () => {
     return () => {};
   }, [fetchAllProducts]);
 
-  if (!products) return <div>loading...</div>;
+  if (!products) return <div>ONE MOMENT PLEASE...</div>;
 
   return (
     <div className="allProductsCatalogueDiv">

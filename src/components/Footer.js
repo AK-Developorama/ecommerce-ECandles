@@ -29,14 +29,12 @@ const Footer = () => {
           />
         </Box>
         <VStack p="2rem">
-          <Text>COMPANY</Text>
           <Link to="/about-us">About Us</Link>
           <Link to="/sustainability">Sustainability</Link>
           <Link to="/contact">Contact</Link>
         </VStack>
         <VStack p="2rem">
-          <Text>CUSTOMER CARE</Text>
-          <Link to="/shipping-returns">Shipping & Returns</Link>
+          <Link to="/shipping-returns">Shipping - Returns</Link>
           <Link to="/privacy-policy">Privacy Policy</Link>
         </VStack>
 
@@ -59,12 +57,9 @@ const Footer = () => {
           Copyright ©2021 Earthfriend Candles, All Rights Reserved.
         </Text>
         <Text pb="1.5vh" textAlign="center">
-          <a
-            className="developoramaLink"
-            href="https://cdpn.io/developorama/debug/f680ddde22aa41b05669b4539970b013"
-          >
+        
             Made with ❤ by AK Developorama
-          </a>
+          
         </Text>
       </Box>
     </Box>

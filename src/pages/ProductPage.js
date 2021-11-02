@@ -15,7 +15,6 @@ import RichText from "../components/RichText";
 import ProductCarousel from "../components/ProductCarousel";
 import ScrollToTop from "react-scroll-up";
 
-
 const ProductPage = () => {
   let { handle } = useParams();
 
@@ -23,7 +22,7 @@ const ProductPage = () => {
     fetchProductWithHandle,
     fetchAllProducts,
     addItemToCheckout,
-    product  
+    product,
   } = useContext(ShopContext);
 
   useEffect(() => {
@@ -47,6 +46,7 @@ const ProductPage = () => {
         <Flex className="imageDiv" justifyContent="center" alignItems="center">
           <Image src={product.images[0].src} />
         </Flex>
+        
         <Box
           className="productDescriptionDiv"
           px="2rem"
@@ -82,12 +82,12 @@ const ProductPage = () => {
       >
         <RichText
           heading="'Soy wax is rated the best non-toxic candle ingredient!' (The Guardian)"
-          headingSize="2.5vh"
+          headingSize="2vh"
         />
         <Center pb="2rem">You Might Also Like:</Center>
 
         <ProductCarousel />
-{/* linkto full catalogue button */}
+        {/* link to full catalogue button */}
         <Box
           pb="6vh"
           display="flex"

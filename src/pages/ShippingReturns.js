@@ -4,7 +4,6 @@ import RichText from "../components/RichText";
 import ScrollToTop from "react-scroll-up";
 
 
-
 const ShippingReturns = () => {
   return (
     <Box pb="6vh" w="100%" className="ShippingReturnsDiv">
@@ -30,7 +29,6 @@ UK ECO DELIVERIES
 
     Sorry we do not ship outside the UK at the moment.
     
-
     REFUND POLICY
 
 13.1 Your Statutory Right To Cancel Your Order
@@ -51,7 +49,6 @@ Where promotional discounts are applied to orders, the discount will be applied 
     `}
           </Text>
         </Box>
-
         <Box
           className="shippingImgDiv"
           w="50%"
