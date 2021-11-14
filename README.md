@@ -6,7 +6,7 @@ So I have created a private Shopify app and linked my React project to it thru t
 
 ### Live Site
 
-Hosted on Netlify: https://earthfriend-candles.netlify.app/
+Hosted on Heroku: https://earthfriend-candles.herokuapp.com/
 
 ### Dependencies
 
@@ -16,10 +16,12 @@ shopify buy
 
 material ui
 
-react icons - nicest material design icons
+react icons 
+
+bootstrap
 
 react router dom 
 
 I used EmailJS, React-Toastify, and React-Hook-Form to help me build my contact form.
 
-bootstrap 
+
