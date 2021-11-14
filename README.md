@@ -1,8 +1,8 @@
 ### Intro
 
-My goal was to help out a friend and her sustainable candle business, using both React and the Shopify API.
+My goal was to help out a client and her sustainable candle business, using both React and the Shopify API.
 
-So I have created a private Shopify app and linked my React project to it thru the API and Shopify buy.
+So I have created a private Shopify app and linked my React project to it thru the API and Shopify buy package.
 
 ### Live Site
 
@@ -22,6 +22,6 @@ bootstrap
 
 react router dom 
 
-I used EmailJS, React-Toastify, and React-Hook-Form to help me build my contact form.
+I used EmailJS, React-Toastify, and React-Hook-Form to build the contact form. No backend needed, EmailJS sends emails from the contact form straight to the client.
 
 
