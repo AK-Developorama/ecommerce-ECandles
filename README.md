@@ -1,25 +1,35 @@
-### Intro
+--- Live Site ---
 
-My goal was to help out a friend and her sustainable candle business, using both React and the Shopify API.
+Hosted on Heroku: https://earthfriend-candles.herokuapp.com/
 
-So I have created a private Shopify app and linked my React project to it thru the API and Shopify buy.
 
-### Live Site
+--- Intro ---
 
-Hosted on Netlify: 
+My goal was to help out a client and her sustainable candle business, using both React and the Shopify API.
 
-### Dependencies
+So I have created a private Shopify app and linked my React project to it thru the API and Shopify buy package.
 
-chakra ui
+--- Dependencies ---
 
 shopify buy
 
-material ui
-
-react icons - nicest material design icons
+react-responsive-carousel
 
 react router dom 
 
-I used EmailJS, React-Toastify, and React-Hook-Form to help me build my contact form.
+emailjs
 
-bootstrap 
+react-hook-form
+
+react-toastify
+
+react-scroll-up
+
+styling: chakra ui, material ui, react icons, bootstrap
+
+
+I used EmailJS, React-Toastify, and React-Hook-Form to build the contact form. 
+
+No backend needed, EmailJS sends emails from the contact form straight to the client.
+
+
