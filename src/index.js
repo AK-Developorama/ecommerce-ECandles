@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/index-min.css';
-import App from './components/App';
-import reportWebVitals from './reportWebVitals';
-import { ChakraProvider } from "@chakra-ui/react"
-import ShopProvider from './context/shopContext';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles/index-min.css";
+import App from "./components/App";
+import reportWebVitals from "./reportWebVitals";
+import { ChakraProvider } from "@chakra-ui/react";
+import ShopProvider from "./context/shopContext";
 
 ReactDOM.render(
   <ChakraProvider>
@@ -13,7 +12,7 @@ ReactDOM.render(
       <App />
     </ShopProvider>
   </ChakraProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
